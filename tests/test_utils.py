@@ -13,8 +13,14 @@ class TestUtils(unittest.TestCase):
         self.assertEqual(utils.add_numbers(2.5, 2.5), 5.0)
 
     def test_greet(self):
-        self.assertEqual(utils.greet("Bob"), "Hello, Bob!")
-        self.assertEqual(utils.greet(""), "Hello, !")  # Might be an edge case
+        # Normal name
+        self.assertEqual(utils.greet("Bob"), "Hello, Bob!", "Should greet Bob by name")
+ 
+        # Empty string
+        self.assertEqual(utils.greet(""), "Hello, there!", "Should greet properly when name is empty")
+ 
+        # None
+        self.assertEqual(utils.greet(None), "Hello, there!", "Should greet properly when name is None")
 
 if __name__ == '__main__':
     unittest.main()

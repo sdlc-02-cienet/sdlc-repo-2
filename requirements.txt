@@ -1,0 +1,5 @@
+# This file lists your project's dependencies.
+# For a simple project, you might not need any external packages.
+# Example: requests==2.28.1
+
+# Currently empty for demonstration purposes

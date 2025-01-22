@@ -11,6 +11,9 @@ def add_numbers(a: float, b: float) -> float:
 
 def greet(name: str) -> str:
     """
-    Returns a greeting message to a specified name.
+    Returns a greeting message. If name is empty or None,
+    defaults to 'Hello, there!'.
     """
+    if not name:
+        return "Hello, there!"
     return f"Hello, {name}!"
